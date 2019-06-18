@@ -1,6 +1,5 @@
 #
-# Copyright (C) 2016 The CyanogenMod Project
-#               2017-2019 The LineageOS Project
+# Copyright (C) 2017 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,33 +14,19 @@
 # limitations under the License.
 #
 
-# Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_m.mk)
+$(call inherit-product, device/samsung/gta2swifi/full_gta2swifi.mk)
 
-# Inherit some common Lineage stuff
+# Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-# Inherit from gta2swifi device
-$(call inherit-product, $(LOCAL_PATH)/device.mk)
-
-PRODUCT_BRAND := Samsung
-PRODUCT_DEVICE := gta2swifi
-PRODUCT_MANUFACTURER := Samsung
-PRODUCT_MODEL := Tab A 8.0 2016
 PRODUCT_NAME := lineage_gta2swifi
+BOARD_VENDOR := samsung
 
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
 
-TARGET_VENDOR_PRODUCT_NAME := gta2swifi
-
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_DEVICE="gta2swifi" \
-    PRODUCT_NAME="gta2swifi" \
     PRIVATE_BUILD_DESC="gta2swifi-user 7.1.2 N2G47H V9.2.6.0.NCCMIEK release-keys"
 
-BUILD_FINGERPRINT := Samsung/gta2swifi/gta2swifi:7.1.2/N2G47H/V9.2.6.0.NCCMIEK:user/release-keys
+# Set BUILD_FINGERPRINT variable
+BUILD_FINGERPRINT := "samsung/gta2swifi/gta2swifi:7.1.2/N2G47H/V9.2.6.0.NCCMIEK:user/release-keys"
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.build.security_patch=2019-01-01
