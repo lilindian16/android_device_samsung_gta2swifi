@@ -50,7 +50,7 @@ TARGET_KERNEL_CONFIG := gta2swifi_sea_open_defconfig
 TARGET_KERNEL_SOURCE := kernel/samsung/msm8917
 
 # ANT+
-BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
+#BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
 
 # Audio
 AUDIO_FEATURE_ENABLED_AAC_ADTS_OFFLOAD := true
