@@ -27,7 +27,7 @@ TARGET_TS_MAKEUP := true
 TARGET_USES_QTI_CAMERA_DEVICE := true
 
 # Kernel
-TARGET_KERNEL_CONFIG := gta2swifi_defconfig
+TARGET_KERNEL_CONFIG := gta2swifi_sea_open_defconfig
 
 # Inherit the proprietary files
 -include vendor/samsung/gta2swifi/BoardConfigVendor.mk
