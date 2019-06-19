@@ -213,7 +213,7 @@ TARGET_PER_MGR_ENABLED := true
 
 #TODO is this necessary
 # Properties
-#TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
+TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
 
 # Power
 TARGET_HAS_LEGACY_POWER_STATS := true
@@ -229,11 +229,11 @@ TARGET_RIL_VARIANT := caf
 
 #TODO is this necessary
 # Recovery
-#TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/recovery/fstab.qcom
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/recovery/fstab.qcom
 
 # SELinux
 #include device/qcom/sepolicy/sepolicy.mk
-#BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
+BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
 # Wi-Fi
 BOARD_HAS_QCOM_WLAN := true
